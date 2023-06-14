@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from '../assets/images/logo.png';
+import { Logo }  from '../components/';
 import main from '../assets/images/main.svg';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
   return (
     <Wrapper>
        <nav>
-            <img src = { logo }  alt = "JobBoard Logo" className = "logo" />
+            <Logo />
         </nav>
         <div className = "container page">
             <div className = "info">
@@ -21,7 +22,7 @@ const Landing = () => {
                 top of your job search with Job Tracker.
 
                 </p>
-                <button className = "btn btn-hero">Login/Register</button>
+                <Link to = "/register" className = "btn btn-hero">Login/Register</Link>
             </div>
             <img src = { main } alt = "job hunt" className = "img main-img" />
         </div>
@@ -37,6 +38,9 @@ const Wrapper = styled.div`
         height: var(--nav-height);
         display: flex;
         align-items: center;
+    }
+    .logo {
+        width: 100px;
     }
     .page {
         min-height: calc(100vh - var(--nav-height));
