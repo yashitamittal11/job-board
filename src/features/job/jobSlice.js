@@ -10,9 +10,9 @@ const initialState = {
   position: '',
   company: '',
   jobLocation: '',
-  jobTypeOptions: ['full-time', 'part-time', 'remote', 'internship'],
+  jobTypeOptions: [ 'full-time', 'part-time', 'remote', 'internship' ],
   jobType: 'full-time',
-  statusOptions: ['interview', 'declined', 'pending'],
+  statusOptions: [ 'interview', 'declined', 'pending' ],
   status: 'pending',
   isEditing: false,
   editJobId: '',
@@ -44,7 +44,10 @@ const jobSlice = createSlice( {
             state[name] = value;
         },
         clearValues: () => {
-            return initialState;
+            return  {
+              ...initialState,
+              jobLocation: getUserFromLocalStorage()?.location || '',
+            };
         },
     },
     extraReducers: ( builder)  => {
