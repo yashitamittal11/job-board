@@ -14,6 +14,9 @@ const SearchContainer = () => {
   const dispatch = useDispatch();
 
   const handleSearch = ( e ) => {
+    // Every time the user types something in the search box, it triggers a request.
+    // So we are checking if the page has finished loading and then only we will dispatch the action.
+    if ( isLoading ) return;
     dispatch( handleChange( { name: e.target.name, value: e.target.value } ) );
   };
 
