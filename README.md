@@ -35,7 +35,7 @@ On the login page, click on the "Demo App" button to load the demo user. This us
 
 Link to the live app - https://job-board-pied.vercel.app/landing
 
-For demo, check this video
+For a demo, check this video
 
-![Demo](https://d.pr/v/hKIoFW+)
+https://github.com/yashitamittal11/job-board/assets/21078987/cf411ec1-4080-4339-868d-080bcf454ca3
 
