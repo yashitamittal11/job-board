@@ -31,6 +31,8 @@ Visit the URL: http://localhost:3000/
 
 On the login page, click on the "Demo App" button to load the demo user. This user allows us to explore the functionality of the different pages in the application with the demo data. However, please note that the demo user does not have access to perform CRUD (Create, Read, Update, Delete) operations.
 
+To perform real-time updates, register as a user.
+
 Link to the live app - https://job-board-pied.vercel.app/landing
 
 For a demo, check this video
