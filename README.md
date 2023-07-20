@@ -6,8 +6,6 @@ Job Board
 - [Installation](#installation)
 - [Usage](#usage)
 - [Demo](#demo)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Description
 This application empowers users to efficiently manage their job application process, facilitating essential operations such as creating, editing, deleting, and viewing all job applications.
