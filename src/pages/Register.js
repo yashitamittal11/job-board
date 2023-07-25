@@ -29,10 +29,9 @@ const Register = () => {
   
   const onSubmit = ( e ) => {
       e.preventDefault();
-      console.log( e.target );
       const { name, email, password, isMember } = values;
       if ( !email || !password || ( !isMember && !name ) ) {
-        toast.error('Please fill all the fields');
+        toast.error( 'Please fill all the fields' );
         return;
       }
      if ( isMember ) {
@@ -69,32 +68,36 @@ const Register = () => {
         }
         {/* email field */}
         <FormRow
-          type='email'
-          name='email'
-          value={values.email}
-          handleChange={handleChange}
+          type = 'email'
+          name = 'email'
+          value = { values.email }
+          handleChange = { handleChange }
         />
         {/* password field */}
         <FormRow
-          type='password'
-          name='password'
-          value={values.password}
-          handleChange={handleChange}
+          type = 'password'
+          name = 'password'
+          value = { values.password }
+          handleChange = { handleChange }
         />
-        <button type='submit' className='btn btn-block' disabled = { isLoading }>
+        <button type = 'submit' className = 'btn btn-block' disabled = { isLoading }>
             { isLoading ? 'loading...' : 'Submit' }
         </button>
         <button
-          type='button'
+          type = 'button'
           className = 'btn btn-block btn-hipster'
           disabled = { isLoading }
           onClick = { () =>
             dispatch(
-              loginUser( { email: 'testUser@test.com', password: 'secret' } )
+              loginUser( { 
+                email: process.env.REACT_APP_TEST_USER_EMAIL,
+                password: process.env.REACT_APP_TEST_USER_PASSWORD
+              } )
             )
           }
         >
-          {isLoading ? 'loading...' : 'demo app'}
+          { isLoading ? 'loading...' : 'demo app' }
+           
         </button>
         <p> 
         { values.isMember ? 'Not a member yet?' : 'Already a member' } 
