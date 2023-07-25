@@ -71,4 +71,4 @@ const Wrapper = styled.div`
     }
 `;
 
-export default Landing
+export default Landing;
